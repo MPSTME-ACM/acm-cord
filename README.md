@@ -19,12 +19,12 @@ A powerful and extendable Discord bot for MUNSoc 25-26 committee, featuring:
 
 - [x] Implement sending mails
 - [x] Allow webhooks to trigger commands.
-- [] Implement proper error handling
-- [] Implement Logging
-- [] Refactor confusing variables
-- [] Add more commands
-- [] Write proper documentation.
-- [] Make a good todo list. 
+- [ ] Implement proper error handling
+- [ ] Implement Logging
+- [ ] Refactor confusing variables
+- [ ] Add more commands
+- [ ] Write proper documentation.
+- [ ] Make a good todo list. 
 
 ## 📁 Project Structure
 
