@@ -1,9 +1,9 @@
 import smtplib
 from email.message import EmailMessage
-from config import SMTP_SEVER, SMTP_SERVER_PORT, SMTP_USERNAME, SMTP_PASSWORD, EMAIL_FROM
+from config import SMTP_SEVER, SMTP_SERVER_PORT, SMTP_USERNAME, SMTP_PASSWORD, EMAIL_FROM, ENABLE_SMTPS
 
 def sendMail(name: str, emailId: str, inviteLink: str, dept: str, role: str):
-    with open('email.html', 'r', encoding='utf-8') as f:
+    with open('mail.html', 'r', encoding='utf-8') as f:
         html = f.read()
     html = html.replace('{{name}}', name)\
                .replace('{{email}}', emailId)\
@@ -18,6 +18,20 @@ def sendMail(name: str, emailId: str, inviteLink: str, dept: str, role: str):
     msg.set_content(f"Please join the discord server for MUNSoc 25-26 by using this link: {inviteLink}")
     msg.add_alternative(html, subtype='html')
 
-    with smtplib.SMTP_SSL(SMTP_SEVER, SMTP_SERVER_PORT) as smtp:
+    smtp = None
+    try:
+        if int(ENABLE_SMTPS) == 1:
+            smtp = smtplib.SMTP_SSL(SMTP_SEVER, SMTP_SERVER_PORT)
+        else:
+            smtp = smtplib.SMTP(SMTP_SEVER, SMTP_SERVER_PORT)
+            smtp.starttls()
+            
         smtp.login(SMTP_USERNAME, SMTP_PASSWORD)
         smtp.send_message(msg)
+
+    except Exception as e:
+        print(e)
+
+    finally:
+        if smtp:
+            smtp.quit()

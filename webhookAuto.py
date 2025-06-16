@@ -28,7 +28,7 @@ def main():
                 print(f"Skipping invalid row: {row}")
                 continue
 
-            message = f"!register {dept_id} {email} {name}"
+            message = f"mun!register {dept_id} {email} {name}"
             send_webhook_message(message)
             time.sleep(DELAY_SECONDS)
 

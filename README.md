@@ -24,7 +24,7 @@ A powerful and extendable Discord bot for MUNSoc 25-26 committee, featuring:
 - [ ] Refactor confusing variables
 - [ ] Add more commands
 - [ ] Write proper documentation.
-- [ ] Make a good todo list. 
+- [ ] Make a good todo list :P
 
 ## 📁 Project Structure
 
@@ -43,6 +43,7 @@ muncord/
 ├── emailUtil.py             # Script to send email
 ├── initialize.py            # Initialization Script
 ├── mail.html                # Template HTML email
+├── mail.mjml                # Template MJML email
 ├── memberModel.py           # SQL Model
 ├── middleware.py            # Custom Decorator
 ├── README.md                # This

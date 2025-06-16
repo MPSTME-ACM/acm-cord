@@ -25,12 +25,15 @@ init_db()
 
 bot = commands.Bot(command_prefix="mun!", intents=intents)
 
-bot_channel = bot.fetch_channel(BOT_CHANNEL)
-invite_channel = bot.fetch_channel(INVITE_TO_CHANNEL)
+bot_channel = None
+invite_channel = None
 
 # Start with the bot's presence set to idle
 @bot.event
 async def on_ready():
+    global bot_channel, invite_channel
+    bot_channel = await bot.fetch_channel(BOT_CHANNEL)
+    invite_channel = await bot.fetch_channel(INVITE_TO_CHANNEL)
     await bot.change_presence(
         status=discord.Status.idle,
         activity=discord.Streaming(name = "MUN Society", url = "https://munsocietympstme.com/")

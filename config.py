@@ -17,7 +17,7 @@ SMTP_SERVER_PORT = os.getenv('SMTP_SERVER_PORT')
 SMTP_USERNAME = os.getenv('SMTP_USERNAME')
 SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
 EMAIL_FROM = os.getenv('EMAIL_FROM')
-
+ENABLE_SMTPS = os.getenv('ENABLE_SMTPS')
 
 dept = ["", "BDnM", "CnD", "ED", "HOSP", "IHC", "LOGI", "PR", "RnD", "TECH"]
 
