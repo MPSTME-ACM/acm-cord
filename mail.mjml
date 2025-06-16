@@ -1,0 +1,57 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" />
+    <mj-style>
+      .button {
+      background-color: #003399;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 12px 24px;
+      text-decoration: none;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#ffffff" font-family="Inter, san-serif" line-height="1.6">
+    <mj-divider border-color="#fff" width="0%" />
+    <mj-section padding="10px 0" border="3px solid #003399" border-radius="4px">
+      <mj-column>
+        <mj-image src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0dPITlNVIgqczQqD7X2C9Tn9RGdet1WhqYA&s alt="MUNSoc Logo" width="230px" align="center"  />
+
+        <mj-spacer height="30px" />
+
+        <mj-text font-size="27px" font-weight="bold" align="center" color="#003399" padding="10px 25px">
+          Congratulations!
+        </mj-text>
+        <mj-text font-size="16px" color="#000000" padding="10px 25px" line-height="1.6">
+          Hello <strong>{{name}}</strong>,<br /><br />
+          After a highly competitive selection process, we’re thrilled to welcome you to MUNSoc as
+          <strong>{{role}} for {{department}}</strong> department! This isn’t just a role—it’s a chance to be part of something meaningful,
+          to shape narratives, lead impactful initiatives, and grow alongside a team that shares your passion for diplomacy, debate, and change.
+        </mj-text>
+<mj-spacer height="20px" />
+
+
+        <mj-text font-size="16px" padding="0 25px 10px 25px" line-height="1.6">
+          Please join the discord server by clicking the button below and start your journey at MUNSOCIETY. 
+        </mj-text>
+<mj-spacer height="20px" />
+
+        <mj-button background-color="#003399" color="#ffffff" href="{{link}}" padding="10px 25px">
+          Join Discord
+        </mj-button>
+        <mj-spacer height="20px" />
+   <mj-divider border-color="#cccccc" width="70%" />
+        <mj-spacer height="20px" />
+<mj-text font-size="12px" padding="0 35px 10px 35px" line-height="1.5" align="center" color="#808080">
+         This link is unique to you, please do not share it with others.
+        </mj-text>
+        <mj-text font-size="12px" padding="0 35px 10px 35px" line-height="1.5" align="center" color="#808080">
+         In case of any query, please contact: Kartik Jain - mun.mail@jkartik.in
+        </mj-text>
+<mj-spacer height="10px" />
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
