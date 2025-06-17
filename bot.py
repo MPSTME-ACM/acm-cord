@@ -23,7 +23,7 @@ intents.message_content = True
 
 init_db()
 
-bot = commands.Bot(command_prefix="mun!", intents=intents)
+bot = commands.Bot(command_prefix="!", intents=intents)
 
 bot_channel = None
 invite_channel = None

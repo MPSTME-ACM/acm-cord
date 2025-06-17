@@ -19,6 +19,7 @@ A powerful and extendable Discord bot for MUNSoc 25-26 committee, featuring:
 
 - [x] Implement sending mails
 - [x] Allow webhooks to trigger commands.
+- [ ] Dockerize the bot for changes.
 - [ ] Implement proper error handling
 - [ ] Implement Logging
 - [ ] Refactor confusing variables
