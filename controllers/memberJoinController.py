@@ -27,9 +27,9 @@ async def memberJoinController(member: discord.Member, bot_id: int):
 
 async def assignDefaultRole(member: discord.Member, mode: int = 0):
     if mode == 2:
-        role = discord.utils.get(member.guild.roles, id=Level.LT.value)
+        role = discord.utils.get(member.guild.roles, id=Level.SC.value)
         if not role:
-            raise LookupError("The LT role was not found.")
+            raise LookupError("The SC role was not found.")
         await member.add_roles(role)
     
     elif mode == 1:

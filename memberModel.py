@@ -1,7 +1,7 @@
 from sqlmodel import SQLModel, Field
 
 class Member(SQLModel, table=True):
-    __tablename__ = "muncord_members"
+    __tablename__ = "acmcord_members"
     email: str = Field(nullable=False, max_length=150)
     name: str = Field(nullable=False, max_length=75)
     department_id: int = Field(nullable=False)

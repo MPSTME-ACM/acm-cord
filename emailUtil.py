@@ -12,10 +12,10 @@ def sendMail(name: str, emailId: str, inviteLink: str, dept: str, role: str):
                .replace('{{role}}', role)
 
     msg = EmailMessage()
-    msg['Subject'] = f"💙 Welcome to the MUNSoc Family, You have been selected as {role} for {dept}"
+    msg['Subject'] = f"💙 Welcome to the ACM Family, You have been selected as {role} for {dept}"
     msg['From'] = EMAIL_FROM
     msg['To'] = emailId
-    msg.set_content(f"Please join the discord server for MUNSoc 25-26 by using this link: {inviteLink}")
+    msg.set_content(f"Please join the discord server for ACM 25-26 by using this link: {inviteLink}")
     msg.add_alternative(html, subtype='html')
 
     smtp = None

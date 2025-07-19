@@ -20,7 +20,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
-    guild: Guild = await bot.create_guild(name="MUN Society 25-26")
+    guild: Guild = await bot.create_guild(name="ACM 25-26")
     channel: TextChannel = await guild.fetch_channels()[0]
     invite: Invite = await channel.create_invite()
     print(f"Join and configure this server: {invite.url}")

@@ -19,30 +19,28 @@ SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
 EMAIL_FROM = os.getenv('EMAIL_FROM')
 ENABLE_SMTPS = os.getenv('ENABLE_SMTPS')
 
-dept = ["", "BDnM", "CnD", "ED", "HOSP", "IHC", "LOGI", "PR", "RnD", "TECH"]
+dept = ["", "CnE", "DC", "Logi", "Mktg", "PR", "RnD", "Tech"]
 
-role = ["Executive", "Core", "LT"]
-roleEmoji = ["💙", "💠", "👑"]
+role = ["Executive", "Core", "SC"]
+roleEmoji = ["💠", "💙", "👑"]
 
 RoleId = [
           0, 
-          int(os.getenv('BDNM_ROLE_ID', 0)),
-          int(os.getenv('CND_ROLE_ID', 0)),
-          int(os.getenv('ED_ROLE_ID', 0)),
-          int(os.getenv('HOSP_ROLE_ID', 0)),
-          int(os.getenv('IHC_ROLE_ID', 0)),
+          int(os.getenv('CNE_ROLE_ID', 0)),
+          int(os.getenv('DC_ROLE_ID', 0)),
           int(os.getenv('LOGI_ROLE_ID', 0)),
+          int(os.getenv('MKTG_ROLE_ID', 0)),
           int(os.getenv('PR_ROLE_ID', 0)),
           int(os.getenv('RND_ROLE_ID', 0)),
           int(os.getenv('TECH_ROLE_ID', 0))
         ]
 
 class Level(Enum):
-    LT = int(os.getenv('LT_ROLE_ID', 0))
+    SC = int(os.getenv('SC_ROLE_ID', 0))
     CORE = int(os.getenv('CORE_ROLE_ID', 0))
     EXEC = int(os.getenv('EXEC_ROLE_ID', 0))
 
-MODE = 0  # 0 = Executive, 1 = Core, 2 = LT
+MODE = 0  # 0 = Executive, 1 = Core, 2 = SC
 
 def get_mode():
     """Get the current mode for direct roles."""
@@ -54,6 +52,6 @@ def set_mode(new_mode: int):
     if new_mode in [0, 1, 2]:
         MODE = new_mode
     else:
-        raise ValueError("Invalid mode. Must be 0 (Executive), 1 (Core), or 2 (LT).")
+        raise ValueError("Invalid mode. Must be 0 (Executive), 1 (Core), or 2 (SC).")
     
     print(f"Mode set to {MODE} ({role[MODE]})")

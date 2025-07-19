@@ -36,7 +36,7 @@ async def on_ready():
     invite_channel = await bot.fetch_channel(INVITE_TO_CHANNEL)
     await bot.change_presence(
         status=discord.Status.idle,
-        activity=discord.Streaming(name = "MUN Society", url = "https://munsocietympstme.com/")
+        activity=discord.Streaming(name = "ACM MPSTME", url = "https://mpstmeacm.com/")
     )
     print(f"Logged in as {bot.user.name} ({bot.user.id})")
 

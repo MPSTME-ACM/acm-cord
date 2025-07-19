@@ -1,6 +1,6 @@
-# 🧠 MUNCord
+# 🧠 ACMCord
 
-A powerful and extendable Discord bot for MUNSoc 25-26 committee, featuring:
+A powerful and extendable Discord bot for ACM 25-26 committee, featuring:
 
 - Member registration via Discord commands or webhooks
 
@@ -30,7 +30,7 @@ A powerful and extendable Discord bot for MUNSoc 25-26 committee, featuring:
 ## 📁 Project Structure
 
 ```
-muncord/
+acmcord/
 ├── controllers/
 │   └── ...Controller.py     # Command Logic
 ├── errorHandler/
@@ -62,7 +62,7 @@ muncord/
     Webhook messages in xorrect format can be used to register members — useful for automations.
 
 - ✅ PostgreSQL Integration
-All members are stored in a muncord_members table:
+All members are stored in a acmcord_members table:
 
     ```
     email TEXT,
@@ -77,7 +77,7 @@ Assigns roles based on:
 
     Department ID
 
-    Role (Exec, Core, LT)
+    Role (Exec, Core, SC)
 
     Discord Roles are configured via .env.
 
@@ -97,4 +97,4 @@ Script send_registers.py takes a CSV and registers each user through the webhook
 
 ---
 
-# Contact: Kartik Jain <mun.dc.gh@jkartik.in>
+# Contact: Kartik Jain <acm.dc.gh@jkartik.in>
