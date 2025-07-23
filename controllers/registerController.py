@@ -2,7 +2,7 @@ import re
 from db import add_member
 from config import get_mode, role, dept
 from discord import Invite
-from emailUtil import sendMail
+from mailgunUtil import sendMail
 
 async def registerController(bot_channel, invite_channel, deptId: int, email: str, name: str):
     if deptId is None or email is None or name is None:

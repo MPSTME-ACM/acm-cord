@@ -12,12 +12,16 @@ INVITE_TO_CHANNEL = int(os.getenv('INVITE_TO_CHANNEL', 0))
 
 DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///./database.db')
 
-SMTP_SEVER = os.getenv('SMTP_SEVER')
-SMTP_SERVER_PORT = os.getenv('SMTP_SERVER_PORT')
-SMTP_USERNAME = os.getenv('SMTP_USERNAME')
-SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
-EMAIL_FROM = os.getenv('EMAIL_FROM')
-ENABLE_SMTPS = os.getenv('ENABLE_SMTPS')
+# SMTP_SEVER = os.getenv('SMTP_SEVER')
+# SMTP_SERVER_PORT = os.getenv('SMTP_SERVER_PORT')
+# SMTP_USERNAME = os.getenv('SMTP_USERNAME')
+# SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
+# EMAIL_FROM = os.getenv('EMAIL_FROM')
+# ENABLE_SMTPS = os.getenv('ENABLE_SMTPS')
+
+DOMAIN = os.getenv('DOMAIN')
+MG_API_KEY = os.getenv('MG_API_KEY')
+MG_FROM = os.getenv('MG_FROM')
 
 dept = ["", "CnE", "DC", "Logi", "Mktg", "PR", "RnD", "Tech"]
 
